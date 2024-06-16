@@ -3,6 +3,7 @@
 // @namespace    https://github.com/terasut-num/canvas-lms-script
 // @version      0.55+1
 // @description  A Canvas UserScript to manage course events
+// @author       Canvas User
 // @include      https://*.instructure.com/calendar* 
 // @require      https://code.jquery.com/jquery-3.4.1.min.js
 // @resource     jQueryUI https://code.jquery.com/ui/1.12.1/jquery-ui.js
