@@ -10,7 +10,7 @@
 // ==/UserScript==
 (function() {
     'use strict';
-	$ = unsafeWindow.$;
+    $ = unsafeWindow.$;
     var assocRegex3 = new RegExp('^/calendar');
     var errors = [];
     var courseId = '';
