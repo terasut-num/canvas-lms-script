@@ -52,7 +52,7 @@
       // Correct Answer extraction (rule 1)
       const srOnly = normalizeWS(tr.querySelector("span.screenreader-only")?.textContent);
       if (srOnly.includes("(Correct answer)")) {
-        correctAnswer = srOnly.split(",")[0].trim();
+        correctAnswer = srOnly.split(", (Correct answer)")[0].trim();
       }
     }
 
