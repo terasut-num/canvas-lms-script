@@ -27,7 +27,7 @@
     const qNoLabel = qNoMatch ? `Question ${Number(qNoMatch[1])}` : (qNoText || "");
 
     // Question
-    const question = normalizeWS(box.querySelector(".question-text")?.textContent);
+    const question = normalizeWS(box.querySelector(".question-text")?.textContent.replaceAll(":", "-").replaceAll(";", "-"));
 
     // Discrimination Index
     const diRaw = normalizeWS(box.querySelector(".discrimination-index-section em.index")?.textContent)
@@ -65,11 +65,11 @@
     // Full Question and Answer formatting (rule 2 + 3)
     const fullQA =
       `${question}` +
-      `\n:` + sanitizeForFull(a) +
-      `\n;` + sanitizeForFull(b) +
-      `\n;` + sanitizeForFull(c) +
-      `\n;` + sanitizeForFull(d) +
-      `\n;` + sanitizeForFull(e);
+      `\n: ` + sanitizeForFull(a) +
+      `\n; ` + sanitizeForFull(b) +
+      `\n; ` + sanitizeForFull(c) +
+      `\n; ` + sanitizeForFull(d) +
+      `\n; ` + sanitizeForFull(e);
 
     rows.push([
       qNoLabel,
